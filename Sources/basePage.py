@@ -6,7 +6,7 @@ class BasePage():
         self.driver = driver
     def find_element(self,by:By, value: str):
         try:
-              elemnt = WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((by,value)))
+               elemnt = WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((by,value)))
         except:
             print(f"Error 1 : Elemnt ({by}, {value})not visible")
 

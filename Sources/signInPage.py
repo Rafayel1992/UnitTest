@@ -33,7 +33,7 @@ class SignInPage(SignInPageLocators,BasePage):
 
     def click_continue_botton(self):
         passwordBottonElement = self.find_element(*(self.clickPasswordFieldLocators))
-        passwordBottonElement.click
+        passwordBottonElement.click()
 
 
 

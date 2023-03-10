@@ -4,7 +4,7 @@ from Sources.basePage import BasePage
 
 
 class ProduktLocator():
-  clickProduktLocators = (By.XPATH,"//img[@class='s-image']")
+  clickProduktLocator = (By.XPATH,"//img[@class='s-image']")
   addToCartBotton = (By.ID, "add-to-cart-button")
 
 class ProduktPage(ProduktLocator,BasePage):

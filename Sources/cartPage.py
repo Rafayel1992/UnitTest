@@ -4,7 +4,7 @@ from Sources.basePage import BasePage
 from Sources.navigtionBar import NavigtionBar
 
 class DeletCartLocator():
-    deletBottonLocators =(By.XPATH,"(//input[@value='Delete'])[1]")
+    deletBottonLocator =(By.XPATH,"(//input[@value='Delete'])[1]")
 
 class DeletProdukt(DeletCartLocator,BasePage):
     def __init__(self,driver):
