@@ -16,3 +16,6 @@ class BasePage():
 
     def get_title(self):
         return self.driver.title
+
+    def maus_muv(self):
+        pass
