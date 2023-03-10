@@ -3,11 +3,11 @@ from selenium.webdriver.common.by import By
 from Sources.basePage import BasePage
 
 
-class ProduktLocator():
+class ProduktLocators():
   clickProduktLocators = (By.XPATH,"//img[@class='s-image']")
   addToCartBotton = (By.ID, "add-to-cart-button")
 
-class ProduktPage(ProduktLocator,BasePage):
+class ProduktPage(ProduktLocators,BasePage):
        def __init__(self, driver):
            super().__init__(driver)
            self.driver = driver
@@ -15,7 +15,7 @@ class ProduktPage(ProduktLocator,BasePage):
 
 
        def click_to_produkt(self):
-          clickProduktElement = self.find_element(*(self.clickProduktLocator))
+          clickProduktElement = self.find_element(*(self.clickProduktLocators))
           clickProduktElement.click()
 
 
