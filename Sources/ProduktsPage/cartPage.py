@@ -1,7 +1,7 @@
 
 from selenium.webdriver.common.by import By
-from Sources.basePage import BasePage
-from Sources.navigtionBar import NavigtionBar
+from Sources.ProduktsPage.basePage import BasePage
+from Nav_Bar.navigtionBar import NavigtionBar
 
 class DeletCartLocator():
     deletBottonLocator =(By.XPATH,"(//input[@value='Delete'])[1]")

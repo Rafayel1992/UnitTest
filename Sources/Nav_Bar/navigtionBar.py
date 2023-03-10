@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from Sources.basePage import  BasePage
+from Sources.ProduktsPage.basePage import BasePage
 
 class NavigtionBarLocator():
     serchFieldLocator = (By.ID,"twotabsearchtextbox")
