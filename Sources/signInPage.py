@@ -31,7 +31,7 @@ class SignInPage(SignInPageLocators,BasePage):
         passwoedPageElement.clear()
         passwoedPageElement.send_keys(password)
 
-    def click_to_password_botton(self):
+    def click_continue_botton(self):
         passwordBottonElement = self.find_element(*(self.clickPasswordFieldLocators))
         passwordBottonElement.click()
 

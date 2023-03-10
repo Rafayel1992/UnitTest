@@ -13,7 +13,7 @@ class MyTest(unittest.TestCase):
           self.driver.delete_all_cookies()
           self.driver.maximize_window()
           self.driver.get("https://www.amazon.com/")
-          self.SignInPageObj = SignInPage(self.driver)
+          self.signInPageObj = SignInPage(self.driver)
           self.navigtionBarObj = NavigtionBar(self.driver)
           self.produktObj = ProduktPage(self.driver)
           self.cartPageObj = DeletProdukt(self.driver)
@@ -22,13 +22,12 @@ class MyTest(unittest.TestCase):
 
 
       def test_signInPage (self):
-          self.SignInPageObj.click_to_signIn_button()
-          self.SignInPageObj.fill_login_field('rafayel1624@gmail.com')
-          self.SignInPageObj.click_to_continue_botton()
-          time.sleep(3)
-          self.SignInPageObj.fill_password_field('2594011624')
-          self.SignInPageObj.click_to_password_botton()
+          self.signInPageObj.click_to_signIn_button()
+          self.signInPageObj.fill_login_field('rafayel1624@gmail.com')
+          self.signInPageObj.click_to_continue_botton()
+          self.signInPageObj.fill_password_field('2594011624')
           time.sleep(5)
+          self.signInPageObj.click_continue_botton()
           self.navigtionBarObj.fill_serch_field("toys")
           self.navigtionBarObj.click_to_serch_botton()
           self.produktObj.click_to_produkt()
@@ -36,7 +35,6 @@ class MyTest(unittest.TestCase):
           self.navigtionBarObj.go_to_home_page()
           self.navigtionBarObj.click_to_cart_botton()
           self.cartPageObj.click_to_delet_botton()
-
           time.sleep(5)
 
 
