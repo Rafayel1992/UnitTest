@@ -10,4 +10,4 @@ class SerchResalt(SerchResaltLocators):
 
 def click_to_serch_botton(self):
     searchBottomElement = self.driver.find_element(*(self.clickSerchBottonLocators))
-    searchBottomElement.click()
+    searchBottomElement.click

@@ -21,4 +21,4 @@ class ProduktPage(ProduktLocators,BasePage):
 
        def add_to_cart_button(self):
          addCartElement = self.find_element(*(self.addToCartBotton))
-         addCartElement.click()
+         addCartElement.click

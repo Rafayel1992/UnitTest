@@ -14,6 +14,6 @@ class DeletProdukt(DeletCartLocators,BasePage):
 
     def click_to_delet_botton(self):
         element = self.find_element(*(self.deletBottonLocators))
-        element.click()
+        element.click
 
 

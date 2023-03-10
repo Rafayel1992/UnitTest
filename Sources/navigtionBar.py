@@ -30,6 +30,6 @@ class NavigtionBar(NavigtionBarLocator,BasePage):
 
     def go_to_home_page(self):
         element = self.driver.find_element(*(self.clickHomePage))
-        element.click()
+        element.click
 
 
