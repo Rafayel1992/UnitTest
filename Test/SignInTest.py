@@ -1,10 +1,10 @@
 from selenium import webdriver
 import unittest
 import time
-from Sources.signInPage import SignInPage
-from Sources.navigtionBar import NavigtionBar
-from Sources.produkt import ProduktPage
-from Sources.cartPage import DeletProdukt
+from Sources.ProduktsPage.signInPage import SignInPage
+from Sources.Nav_Bar.navigtionBar import NavigtionBar
+from Sources.Nav_Bar.produkt import ProduktPage
+from Sources.ProduktsPage.cartPage import DeletProdukt
 
 class MyTest(unittest.TestCase):
       def setUp(self) -> None:
