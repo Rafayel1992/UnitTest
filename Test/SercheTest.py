@@ -1,7 +1,6 @@
 
 from selenium import webdriver
 import unittest
-import time
 from Sources.Nav_Bar.navigtionBar import NavigtionBar
 from Sources.Nav_Bar.produkt import ProduktPage
 
