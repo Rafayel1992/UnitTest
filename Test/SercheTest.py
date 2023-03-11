@@ -20,6 +20,7 @@ class SercheTest (unittest.TestCase):
         self.navigtionBarObj.fill_serch_field("toys")
         self.navigtionBarObj.click_to_serch_botton()
         self.produktObj.click_to_produkt()
+        self.produktObj.add_to_cart_button()
 
 
     def tearDown(self) -> None:
