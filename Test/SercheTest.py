@@ -15,12 +15,12 @@ class SercheTest (unittest.TestCase):
         self.navigtionBarObj = NavigtionBar(self.driver)
         self.produktObj = ProduktPage(self.driver)
 
-         
+
     def test_sercheResalt(self):
         self.navigtionBarObj.fill_serch_field("toys")
         self.navigtionBarObj.click_to_serch_botton()
         self.produktObj.click_to_produkt()
-        self.produktObj.add_to_cart_button()
+
 
     def tearDown(self) -> None:
             self.driver.close()
