@@ -4,8 +4,9 @@ import time
 from selenium import webdriver
 import unittest
 from Sources.Nav_Bar.serchResalts import ProduktPage
-from Sources.ProduktsPage.signInPage import  SignInPage
-from  Sources.Nav_Bar.navigtionBar import NavigtionBar
+from Sources.ProduktsPage.signInPage import SignInPage
+from Sources.ProduktsPage.cartPage import DeletProdukt
+from Sources.Nav_Bar.navigtionBar import NavigtionBar
 
 
 
@@ -18,7 +19,9 @@ class CartTest(unittest.TestCase):
         self.driver.get("https://www.amazon.com/")
         self.serchResaltsObj = ProduktPage(self.driver)
         self.signInPageObj = SignInPage(self.driver)
+        self.cartPageObj = DeletProdukt(self.driver)
         self.navigtionBarObj = NavigtionBar(self.driver)
+
 
 
     def test_cart(self):
@@ -30,10 +33,10 @@ class CartTest(unittest.TestCase):
         time.sleep(5)
         self.signInPageObj.fill_password_field('2594011624')
         self.signInPageObj.click_signIn_botton()
-        self.navigtionBarObj.fill_serch_field("coffee maker")
-        self.navigtionBarObj.click_to_serch_botton()
-        self.serchResaltsObj.click_to_serch_produkt()
-        self.serchResaltsObj.add_to_cart_button()
+        self.navigtionBarObj.click_to_cart_botton()
+        self.cartPageObj.click_to_delet_botton()
+
+
         time.sleep(5)
 
 
