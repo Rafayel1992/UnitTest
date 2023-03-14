@@ -31,6 +31,7 @@ class SercheTest (unittest.TestCase):
         self.navigtionBarObj.click_to_serch_botton()
         self.produktObj.click_to_serch_produkt()
         self.produktObj.add_to_cart_button()
+        time.sleep(3)
 
 
     def tearDown(self) -> None:
