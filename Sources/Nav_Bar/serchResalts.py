@@ -14,7 +14,7 @@ class ProduktPage(ProduktLocator,BasePage):
 
 
 
-       def click_to_produkt(self):
+       def click_to_serch_produkt(self):
           clickProduktElement = self.find_element(*(self.clickProduktLocator))
           clickProduktElement.click()
 

@@ -2,7 +2,7 @@
 from selenium import webdriver
 import unittest
 from Sources.Nav_Bar.navigtionBar import NavigtionBar
-from Sources.Nav_Bar.produkt import ProduktPage
+from Sources.Nav_Bar.serchResalts import ProduktPage
 
 class SercheTest (unittest.TestCase):
     def setUp(self) -> None:
@@ -18,7 +18,7 @@ class SercheTest (unittest.TestCase):
     def test_sercheResalt(self):
         self.navigtionBarObj.fill_serch_field("toys")
         self.navigtionBarObj.click_to_serch_botton()
-        self.produktObj.click_to_produkt()
+        self.produktObj.click_to_serch_produkt()
         self.produktObj.add_to_cart_button()
 
 

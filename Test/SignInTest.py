@@ -1,4 +1,7 @@
+
+from HTMLTestRunner import HTMLTestRunner
 from selenium import webdriver
+#from selenium.webdriver.common.by import By
 import unittest
 import time
 from Sources.ProduktsPage.signInPage import SignInPage
@@ -14,6 +17,7 @@ class MyTest(unittest.TestCase):
           self.driver.maximize_window()
           self.driver.get("https://www.amazon.com/")
           self.signInPageObj = SignInPage(self.driver)
+
          # self.navigtionBarObj = NavigtionBar(self.driver)
          # self.produktObj = ProduktPage(self.driver)
          # self.cartPageObj = DeletProdukt(self.driver)
@@ -21,13 +25,17 @@ class MyTest(unittest.TestCase):
 
 
 
-      def test_signInPage (self):
+      def test_signInPage(self):
+          self.signInPageObj.mouse_move()
+          time.sleep(3)
           self.signInPageObj.click_to_signIn_button()
           self.signInPageObj.fill_login_field('rafayel1624@gmail.com')
           self.signInPageObj.click_to_continue_botton()
-          self.signInPageObj.fill_password_field('2594011624')
           time.sleep(5)
-          self.signInPageObj.click_continue_botton()
+          self.signInPageObj.fill_password_field('2594011624')
+          self.signInPageObj.click_signIn_botton()
+          time.sleep(5)
+
          # self.navigtionBarObj.fill_serch_field("toys")
          # self.navigtionBarObj.click_to_serch_botton()
          # self.produktObj.click_to_produkt()
@@ -41,6 +49,5 @@ class MyTest(unittest.TestCase):
 
       def tearDown(self) -> None:
           self.driver.close()
-
 
 

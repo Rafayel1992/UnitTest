@@ -2,6 +2,7 @@ from HTMLTestRunner import HTMLTestRunner
 import unittest
 from Test.SignInTest import MyTest
 from Test.SercheTest import SercheTest
+from Test.CartTest import CartTest
 
 class MyTestSuite(unittest.TestCase):
 
@@ -9,7 +10,8 @@ class MyTestSuite(unittest.TestCase):
         smoke_test = unittest.TestSuite()
         smoke_test.addTests([
             unittest.defaultTestLoader.loadTestsFromTestCase(MyTest),
-            unittest.defaultTestLoader.loadTestsFromTestCase(SercheTest)
+            unittest.defaultTestLoader.loadTestsFromTestCase(SercheTest),
+            unittest.defaultTestLoader.loadTestsFromTestCase(CartTest),
 
         ])
 

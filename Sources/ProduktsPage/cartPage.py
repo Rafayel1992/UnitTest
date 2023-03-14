@@ -10,7 +10,7 @@ class DeletProdukt(DeletCartLocator,BasePage):
     def __init__(self,driver):
         super().__init__(driver)
         self.driver = driver
-        self.navBarObj = NavigtionBar(self.driver)
+
 
     def click_to_delet_botton(self):
         element = self.find_element(*(self.deletBottonLocator))

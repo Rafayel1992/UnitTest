@@ -1,5 +1,7 @@
 from Sources.ProduktsPage.basePage import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 class SignInPageLocator():
     signInFieldLocator = (By.ID,"nav-link-accountList")
@@ -7,6 +9,7 @@ class SignInPageLocator():
     continueFieldLocator = (By.ID,"continue")
     passwordFieldLocator = (By.ID,"ap_password")
     clickPasswordFieldLocator = (By.ID,"signInSubmit")
+
 
 class SignInPage(SignInPageLocator,BasePage):
     def __init__(self,driver):
@@ -31,9 +34,11 @@ class SignInPage(SignInPageLocator,BasePage):
         passwoedPageElement.clear()
         passwoedPageElement.send_keys(password)
 
-    def click_continue_botton(self):
+    def click_signIn_botton(self):
         passwordBottonElement = self.find_element(*(self.clickPasswordFieldLocator))
         passwordBottonElement.click()
+
+
 
 
 
